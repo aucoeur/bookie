@@ -6,9 +6,10 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 
+const detectText = require('./detectText.js');
 const app = express();
-app.use(cors());
 
+app.use(cors());
 
 // Express View Engine for Handlebars
 app.engine('.hbars', exphbs({
@@ -21,10 +22,10 @@ app.set('view engine', '.hbars');
 
 // Public & Uploads Folder
 app.use('/public', express.static(__dirname + '/public'));
-app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/processed', express.static(__dirname + '/processed'));
 
 const storage = multer.diskStorage({
-  destination: 'uploads/',
+  destination: 'processed/',
 
   // By default, multer removes file extensions so let's add them back
   filename: function (req, file, cb) {
@@ -49,11 +50,16 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.post('/', upload.single('image'), function (req, res) {
+app.post('/process', upload.single('image'), async function (req, res) {
+
+  const json_res = await detectText(req.file.path);
+  // JSON.stringify(json_res, null, 2);
   // Display uploaded image
-  res.render('index', {
+  return res.render('index', {
       uploaded: true,
-      img: req.file.path
+      filename: req.file.filename,
+      img: req.file.path,
+      json: `${req.file.path.split('.')[0]}.json`
     })
 });
 

@@ -1,5 +1,7 @@
 <div>
-    You have uploaded this image: {{ img }}
-    <hr />
-    <img src={{ img }} />
+  You have uploaded this image: {{ filename }}. <br />
+  Annotation is located at: {{ json }}.
+  <hr />
+  <img src={{ img }} />
+  <hr />
 </div>

@@ -1,4 +1,4 @@
-<form action="/" method="POST" enctype='multipart/form-data'>
+<form action="/process" method="POST" enctype='multipart/form-data'>
     <div>
         <label for="image">Upload a picture of your books:</label>
         <input type="file" name="image" id="image" />

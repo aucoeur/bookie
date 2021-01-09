@@ -1,9 +1,9 @@
 <h1>Hello WOrld</h1>
 
-{{> form }}
-
-<hr />
-
 {{#if uploaded }}
+    <h4><a href="/">Process another</a></h4>
     {{> uploadedFile img=img }}
+{{else}}
+    {{> form }}
+    <hr />
 {{/if}}

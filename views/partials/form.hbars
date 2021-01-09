@@ -1,0 +1,9 @@
+<form action="/" method="POST" enctype='multipart/form-data'>
+    <div>
+        <label for="image">Upload a picture of your books:</label>
+        <input type="file" name="image" id="image" />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>

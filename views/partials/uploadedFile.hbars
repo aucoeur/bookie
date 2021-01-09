@@ -1,0 +1,5 @@
+<div>
+    You have uploaded this image: {{ img }}
+    <hr />
+    <img src={{ img }} />
+</div>

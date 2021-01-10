@@ -25,6 +25,4 @@ async function detectText(file) {
   return toJSON
 }
 
-// detectText(file);
-
 module.exports = detectText;

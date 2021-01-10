@@ -6,7 +6,8 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 
-const detectText = require('./detectText.js');
+const detectText = require('./utils/detectText.js');
+const drawBox = require('./utils/drawBox');
 const app = express();
 
 app.use(cors());
@@ -52,8 +53,11 @@ app.get('/', (req, res) => {
 
 app.post('/process', upload.single('image'), async function (req, res) {
 
-  const json_res = await detectText(req.file.path);
+  // Commented out while testing
+  // const json_res = await detectText(req.file.path);
+
   // JSON.stringify(json_res, null, 2);
+
   // Display uploaded image
   return res.render('index', {
       uploaded: true,

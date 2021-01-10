@@ -1,6 +1,7 @@
 
 .eslintrc.yml
 quickstart.js
+public/bookie/
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,node,vscode,dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,vscode,dotenv

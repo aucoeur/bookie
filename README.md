@@ -6,6 +6,6 @@ An app that aims to help users quickly catalog, check prices for resale, donatio
 <img src="./public/images/annotated.png" width="400">
 
 ## Credits
-Google Cloud Vision API = https://cloud.google.com/vision/docs
-Water.css - https://watercss.kognise.dev/
-node-canvas - https://github.com/Automattic/node-canvas
+Google Cloud Vision API - https://cloud.google.com/vision/docs 
+PureImage - https://github.com/joshmarinacci/node-pureimage  
+Water.css - https://watercss.kognise.dev/  

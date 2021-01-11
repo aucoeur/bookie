@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fs = require('fs');
 const vision = require('@google-cloud/vision');
 
@@ -13,16 +14,16 @@ async function detectText(file) {
   const [result] = await client.textDetection(file);
   const detections = result.textAnnotations;
 
-  const toJSON = JSON.stringify(detections, null, 4)
+  const toJSON = JSON.stringify(detections, null, 2);
 
   const log = fs.createWriteStream(`${file.split('.')[0]}.json`, {
     flags: 'a',
   });
 
-  console.log('Writing to file...');
+  console.log('Writing annotations to file...');
   log.write(toJSON);
   console.log('Data write complete');
-  return toJSON
+  return toJSON;
 }
 
 module.exports = detectText;

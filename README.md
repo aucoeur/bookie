@@ -8,3 +8,4 @@ An app that aims to help users quickly catalog, check prices for resale, donatio
 ## Credits
 Google Cloud Vision API = https://cloud.google.com/vision/docs
 Water.css - https://watercss.kognise.dev/
+node-canvas - https://github.com/Automattic/node-canvas

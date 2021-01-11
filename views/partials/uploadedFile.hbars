@@ -4,4 +4,6 @@
   <hr />
   <img src={{ img }} />
   <hr />
+  <h3>Annotated</h3>
+  <img src={{ annotated }} />
 </div>

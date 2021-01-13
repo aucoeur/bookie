@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --ignore './processed/'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
